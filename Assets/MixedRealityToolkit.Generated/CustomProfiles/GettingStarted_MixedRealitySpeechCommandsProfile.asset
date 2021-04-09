@@ -45,8 +45,29 @@ MonoBehaviour:
       description: Toggle Profiler
       axisConstraint: 0
   - localizationKey: 
-    keyword: 
-    keyCode: 0
+    keyword: Next
+    keyCode: 275
+    action:
+      id: 0
+      description: Toggle Profiler
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Previous
+    keyCode: 276
+    action:
+      id: 0
+      description: Toggle Profiler
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Brighter
+    keyCode: 273
+    action:
+      id: 0
+      description: Toggle Profiler
+      axisConstraint: 0
+  - localizationKey: 
+    keyword: Dimmer
+    keyCode: 274
     action:
       id: 0
       description: Toggle Profiler
