@@ -919,6 +919,7 @@ GameObject:
   - component: {fileID: 548919792}
   - component: {fileID: 548919790}
   - component: {fileID: 548919789}
+  - component: {fileID: 548919793}
   m_Layer: 5
   m_Name: RawImage
   m_TagString: Untagged
@@ -1022,11 +1023,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hostTransform: {fileID: 548919785}
   manipulationType: 3
-  twoHandedManipulationType: 7
+  twoHandedManipulationType: 5
   allowFarManipulation: 1
   useForcesForNearManipulation: 0
   oneHandRotationModeNear: 1
-  oneHandRotationModeFar: 1
+  oneHandRotationModeFar: 0
   releaseBehavior: 3
   smoothingFar: 1
   smoothingNear: 1
@@ -1075,6 +1076,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoConstraintSelection: 1
   selectedConstraints: []
+--- !u!114 &548919793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548919784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b3e6359c9750ad4fb8a05c9b8704d7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handType: 3
+  proximityType: 3
+  constraintOnRotation: 5
+  useLocalSpaceForConstraint: 0
 --- !u!1 &678829887
 GameObject:
   m_ObjectHideFlags: 0
