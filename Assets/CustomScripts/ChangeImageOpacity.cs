@@ -10,15 +10,17 @@ public class ChangeImageOpacity : MonoBehaviour
     private string image_prefix =  "Images/";
     public string image_format = ".png";
     private int cur_image_no = 1;
-    public float opacity_step = 0.25f;
+    public float init_opacity = 0.35f;
+    public float opacity_step = 0.2f;
+    public float lower_bound = 0.35f;
+    public float upper_bound = 0.75f;
     // Start is called before the first frame update
     void Start()
     {
         image = GetComponent<RawImage>();
-        // for (int i = 0; i < 4; i++)
-        // {
-        //     DecreaseOpacity();
-        // }
+        var col = image.color;
+        col.a = init_opacity;
+        image.color = col;
     }
 
     // Update is called once per frame
@@ -31,7 +33,8 @@ public class ChangeImageOpacity : MonoBehaviour
     {
         Debug.Log("Image opacity decreasing");
         var col = image.color;
-        col.a = col.a - opacity_step <= 0.0f ? 0.0f : col.a - opacity_step;
+        var decreasedTo = col.a - opacity_step;
+        col.a = decreasedTo <= lower_bound? lower_bound : decreasedTo;
         image.color = col;
         Debug.Log("col.a: " + image.color.a);
     }
@@ -40,7 +43,8 @@ public class ChangeImageOpacity : MonoBehaviour
     {
         Debug.Log("Image opacity increasing");
         var col = image.color;
-        col.a = col.a + opacity_step >= 1.0f ? 1.0f : col.a + opacity_step;
+        var increasedTo = col.a + opacity_step;
+        col.a = increasedTo >= upper_bound ? upper_bound : increasedTo;
         image.color = col;
         Debug.Log("col.a: " + image.color.a);
     }

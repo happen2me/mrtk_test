@@ -994,7 +994,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image_num: 14
   image_format: .png
-  opacity_step: 0.25
+  init_opacity: 0.35
+  opacity_step: 0.2
+  lower_bound: 0.35
+  upper_bound: 0.75
 --- !u!114 &548919789
 MonoBehaviour:
   m_ObjectHideFlags: 0
